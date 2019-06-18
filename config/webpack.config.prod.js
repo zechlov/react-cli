@@ -56,7 +56,8 @@ module.exports = {
   bail: true,
   // We generate sourcemaps in production. This is slow but gives good results.
   // You can exclude the *.map files from the build during deployment.
-  devtool: shouldUseSourceMap ? 'source-map' : false,
+  // devtool: shouldUseSourceMap ? 'source-map' : false,
+  devtool: false,
   // In production, we only want to load the polyfills and the app code.
   entry: [require.resolve('./polyfills'), paths.appIndexJs],
   output: {
@@ -183,7 +184,7 @@ module.exports = {
                 options: {
                   importLoaders: 1,
                   // modules: true,
-                  // localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                  // localIdentName: '[name]__[local]--[hash:base64:5]',
                 },
               },
               {
@@ -237,9 +238,10 @@ module.exports = {
                       options: {
                         importLoaders: 1,
                         minimize: true,
-                        modules: true,
-                        localIdentName: '[path][name]__[local]--[hash:base64:5]',
-                        sourceMap: shouldUseSourceMap,
+                        // modules: true,
+                        // localIdentName: '[name]__[local]--[hash:base64:5]',
+                        // sourceMap: shouldUseSourceMap,
+                        sourceMap: false,
                       },
                     },
                     {
@@ -278,12 +280,32 @@ module.exports = {
                 },
                 {
                     loader: require.resolve('less-loader'), // compiles Less to CSS
+                    options: {
+                      modifyVars: {
+                      'primary-color': '#6e68fc !important',
+                      'link-color': '#6e68fc !important',
+                    },
+                    javascriptEnabled: true,
+                  },
                 },
             ],
           },
           {
-            test:/\.scss$/,
-            loaders:['style-loader','css-loader?modules','sass-loader']
+            test: /\.scss$/,
+            use: [
+                require.resolve('style-loader'),
+                {
+                    loader: require.resolve('css-loader'),
+                    options: {
+                      importLoaders: 1,
+                      modules: true,
+                      localIdentName: '[name]__[local]--[hash:base64:5]',
+                    },
+                },
+                {
+                    loader: require.resolve('sass-loader'), // compiles Sass to CSS
+                },
+            ],
           },
           // "file" loader makes sure assets end up in the `build` folder.
           // When you `import` an asset, you get its filename.
@@ -329,6 +351,10 @@ module.exports = {
         minifyCSS: true,
         minifyURLs: true,
       },
+    }),
+    new webpack.DllReferencePlugin({
+      context: __dirname,//上下文关系
+      manifest: require('../dll/manifest.json')//生成的索引表
     }),
     // Makes some environment variables available to the JS code, for example:
     // if (process.env.NODE_ENV === 'production') { ... }. See `./env.js`.
@@ -422,10 +448,12 @@ module.exports = {
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     // Perform type checking and linting in a separate process to speed up compilation
     new ForkTsCheckerWebpackPlugin({
-      async: false,
+      async: true,
+      silent: false,
       tsconfig: paths.appTsProdConfig,
       tslint: paths.appTsLint,
     }),
+    new webpack.optimize.ModuleConcatenationPlugin()
   ],
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.

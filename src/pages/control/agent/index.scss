@@ -1,0 +1,194 @@
+.agent-page{
+  width: 1200px;
+  background: white;
+  box-sizing: border-box;
+  padding: 36px 40px;
+  margin: 0 auto;
+  .input-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .input{
+      width: 420px;
+    }
+  }
+  .head-line{
+    font-size: 14px;
+    line-height: 60px;
+  }
+  .icon-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    button{
+      margin: 0 5px;
+    }
+  }
+  .table{
+    table{
+      border-collapse:separate; 
+      border-spacing:0px 10px;
+      thead{
+        border-spacing:0;
+        th{
+          border-bottom: none;
+          border-top: 1px solid #e8e8e8;
+          background: white;
+        }
+      }
+      .row{
+        height: 60px;
+        background: #F7FAFB;
+        td{
+          border: none;
+          padding: 14px 15px;
+        }
+      }   
+    }
+  }
+  
+  .expands-row{
+    padding: 0 20px;
+    .btn{
+      color: white;
+      background: #62CC95;
+      border: none;
+      margin: 15px 0;
+      animation: show .4s 1;
+      &:hover{
+        opacity: 0.85;
+      }
+    }
+    @keyframes show {
+    from {opacity: 0;}
+    to {opacity: 1;}
+    }
+    .programme-line {
+      border-top: 1px solid #ECECEC;
+      padding: 14px  0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      animation: show .4s 1;
+      .desc-part{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .title-line{
+          font-size: 22px;
+          color: #333333;
+          line-height: 40px;
+          display: flex;
+          align-items: center;
+          .app-type, .client-type, .status-type, .expired-type{
+            height: 18px;
+            line-height: 18px;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            box-sizing: content-box;
+            text-align: center;
+            padding: 0 8px;
+            font-size: 12px;
+            margin: 0 4px;
+          }
+          .app-type{
+            color: #6e68fc;
+            border-color: #6e68fc !important;
+            margin-left: 11px;
+          }
+          .client-type{
+            color: #62CC95;
+            border-color: #62CC95;
+          }
+          .status-type{
+            color: #6898FC;
+            border-color: #6898FC;
+          }
+          .expired-type{
+            color: #333333;
+            border-color: #333333;
+          }
+        }
+        .status-line{
+          font-size: 14px;
+          line-height: 30px;
+          color: #666666;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .qr-box{
+            cursor: pointer;
+            color: #6e68fc;
+            margin-right:5px;
+          }
+          .type-box{
+            margin-right: 5px;
+          }
+          .time-box{
+            margin: 0 5px;
+          }
+        }
+        .btns-line{
+          margin: 10px 0;
+          button{
+            margin-right: 14px;
+            width: 80px;
+            height: 28px;
+          }
+        }
+      }
+      .icon-part{
+        button{
+          margin: 3px;
+        }
+        .btn{
+          color: white;
+          border: none;
+          background: #62CC95;
+          &:hover{
+            opacity: 0.85;
+          }
+        }
+      }
+    }
+    .empty{
+      height: 200px;
+      background: white url('../../../assets/img/nodata.svg') 50% 50% no-repeat;
+      border-radius: 6px;
+      line-height: 260px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+  }
+}
+.add-content{
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  .title{
+    font-size: 18px;
+    color: #333333;
+    line-height: 40px;
+  }
+  .add-input{
+    width: 100%;
+    >div{
+      margin: 10px 0;
+      input{
+        background: #F7FAFB;
+      }
+    }
+    .form-btns{
+      display: flex;
+      justify-content: center;
+      button{
+        width: 140px;
+        height: 40px;
+        margin: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.main {
+  flex: 1;
+  margin-left: 38px;
+
+  .category {
+    margin-top: 35px;
+
+    .category-name {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 48px;
+        height: 48px;
+      }
+
+      span {
+        color: #000;
+        font-size: 1.25rem;
+      }
+    }
+
+    .product-card-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

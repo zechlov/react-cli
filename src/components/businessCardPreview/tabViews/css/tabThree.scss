@@ -1,0 +1,53 @@
+.tab-line{
+    padding: 1em 1em 1em;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x:hidden ;
+    width: 200%;
+  }
+  .tab-box{
+    display: inline-block;
+    margin: 0 0.4em;
+  }
+  .tab-item{
+    display: inline-block;
+    border-bottom: 3px solid transparent;
+    padding:  0.3em 0;
+  }
+  .article-content{
+    padding: 0 1em;
+  }
+  .article-box{
+    border-radius: 0.5em;
+    box-shadow: 0 0 1.5em 2px rgba(0,0,0,0.08);
+    overflow: hidden;
+    margin-bottom: 1em;
+    padding-bottom: 0.3em;
+  }
+  .article-img{
+    width: 100%;
+    height: 9em;
+    background: #dfdfdf;
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
+  }
+  .article-title{
+    padding: 0 1em;
+    padding-top: .3em;
+    line-height: 2em;
+    font-size: 1em;
+    font-weight: 600;
+  }
+  .article-time{
+    padding: 0 1em;
+    font-size: 0.8em;
+    color: rgba(0,0,0,0.5)
+  }
+  .bottom{
+    font-size: 0.8em;
+    line-height: 5em;
+    text-align: center;
+    color: #ccc;
+  }

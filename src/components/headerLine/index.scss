@@ -1,0 +1,19 @@
+      .tab-content{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-bottom: 1px solid #F0F0F0;
+        .tab-box{
+          margin-bottom: -16px; 
+        }
+        .tab-btns{
+          display: flex;
+          font-size: 14px;
+          line-height: 46px;
+          .tab-btn{
+            margin: 0 13px;
+            cursor: pointer;
+          }
+        }
+      }

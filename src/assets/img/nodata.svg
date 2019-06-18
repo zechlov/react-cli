@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="324px" height="191px" viewBox="0 0 324 191" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="324" height="191"></rect>
+        <linearGradient x1="50%" y1="-52.1595368%" x2="50%" y2="32.2343425%" id="linearGradient-3">
+            <stop stop-color="#BADDFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#BEE5FF" offset="0%"></stop>
+            <stop stop-color="#8AC6FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03团队管理-01团队成员-copy" transform="translate(-600.000000, -365.000000)">
+            <g id="Group-2" transform="translate(600.000000, 365.000000)">
+                <g id="Mask">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                    <circle fill="url(#linearGradient-3)" mask="url(#mask-2)" cx="162.5" cy="239.5" r="177.5"></circle>
+                </g>
+                <g id="Group" transform="translate(117.000000, 21.000000)">
+                    <path d="M81.6972663,31.1751603 L10.3235483,31.1751603 L7.16761882,5.05024038 C6.84374061,2.3650641 8.94518292,0 11.6454233,0 L80.3716252,0 C83.0793977,0 85.1770739,2.3650641 84.8531957,5.05024038 L81.6972663,31.1751603 Z" id="Fill-1" fill="#9ED0FF"></path>
+                    <path d="M55.5407027,15.8654647 L3.96185897,15.8654647 C1.77379808,15.8654647 0,17.6392628 0,19.8273237 L3.53942064,58.1695641 C3.53942064,60.357625 5.31321872,62.131423 7.50127961,62.131423 L84.4637796,62.131423 C86.5463918,62.131423 88.2712315,60.5195641 88.4143405,58.4444839 L92.1690681,16.4981571 L92.3611354,13.1953526 C92.4967123,10.9206731 90.68902,9 88.4143405,9 L59.1711514,9 C57.1676258,9 55.5407027,10.6269231 55.5407027,12.6304487 L55.5407027,15.8654647 Z" id="Fill-6" fill="url(#linearGradient-4)"></path>
+                    <text id="？" font-family="PingFangSC-Medium, PingFang SC" font-size="36" font-weight="400" fill="#FFFFFF">
+                        <tspan x="38" y="57">？</tspan>
+                    </text>
+                </g>
+                <ellipse id="Oval-8" fill="#CBDBEC" opacity="0.8" cx="98.5" cy="83" rx="4.5" ry="2"></ellipse>
+                <rect id="Rectangle-5" fill="#AE8057" x="97" y="72" width="3" height="11" rx="1.5"></rect>
+                <circle id="Oval-7" fill="#F1C74F" cx="98.5" cy="65.5" r="8.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

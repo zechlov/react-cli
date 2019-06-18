@@ -1,0 +1,46 @@
+.control-sider{
+  width: 220px;
+  box-sizing: border-box;
+  background: white;
+  padding: 30px 20px;
+  min-height: 580px;
+  position: relative;
+  .bread-crumb{
+    position: absolute;
+    top: 10px;
+    left: 36px;
+  }
+  .category-item{
+    display: flex;
+    align-items: center;
+    height: 34px;
+    width: 180px;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 0 15px;
+    position: relative;
+    margin: 10px 0;
+
+    &:hover{
+      background: rgba(110, 104, 252, 1);
+      border-radius: 4px;
+      color: white;
+    }
+    i{
+      position: absolute;
+      right: 15px;
+      top: 10px;
+    }
+  }
+  .itemActive {
+    background: rgba(110, 104, 252, 1);
+    border-radius: 4px;
+    color: #fff;
+    img {
+      filter: brightness(100)
+    }
+    span {
+      color: white;
+    }
+  }
+}

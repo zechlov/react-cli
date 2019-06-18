@@ -1,0 +1,43 @@
+.setting-wrapper{
+  padding: 20px 0;
+  .head-line{
+    font-size: 14px;
+    color: #333333;
+    display: flex;
+    margin: 15px 0;
+    div{
+      margin-right: 46px;
+      cursor: pointer;
+      &.active{
+        color: #6e68fc;
+      }
+    }
+  }
+  .avatar{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    img{
+      width: 100%;
+    }
+  }
+  .expands-row{
+    table{
+      td{
+        padding: 10px 16px;
+        border: none;
+      }
+    }
+  }
+}
+.empty{
+  height: 240px;
+  background: white url('src/assets/img/nodata.svg') 50% 50% no-repeat;
+  line-height: 260px;
+  box-sizing: border-box;
+  text-align: center;
+}

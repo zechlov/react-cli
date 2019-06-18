@@ -1,0 +1,126 @@
+.create-body{
+  width: 100%;
+  display: flex;
+  color: #333333;
+  .instance-list{
+    width:264px;
+    padding: 35px 0;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 0px 24px 0px rgba(42,40,85,0.11);
+    border-radius:12px 0px 0px 12px;
+    .instance-item{
+      width: 100%;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      border-right: 4px solid transparent;
+      padding: 0 23px;
+      cursor: pointer;
+      font-size: 16px;
+      &.active{
+        background: rgba(110,104,252,0.1);
+        border-color: #6e68fc !important; 
+      }
+      .icon{
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: #cccccc;
+        overflow: hidden;
+        margin-right: 16px;
+      }
+    }
+  }
+  .select-content{
+    padding: 40px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 936px;
+    .tabs-line{
+      display: flex;
+      justify-content: space-between;
+      width: 40%;
+      .tab{
+        font-size: 20px;
+        cursor: pointer;
+        &.active{
+          color: #6e68fc;
+          position: relative;
+          &::after{
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: auto;
+            bottom: -5px;
+            right: auto;
+            height: 3px;
+            width: 20px;
+            background-color: #6e68fc;
+          }
+        }
+      }
+    }
+    .desc-line{
+      width: 100%;
+      padding: 0 0 26px;
+      box-sizing: border-box;
+      border-bottom: 3px dashed #E9E9E9;
+      .title{
+        font-size: 16px;
+        line-height: 25px;
+      }
+      .desc{
+        font-size: 14px;
+        color: #666666;
+      }
+    }
+    .price-content{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 0;
+      width: 100%;
+      .title{
+        font-size: 16px;
+        line-height: 30px;
+      }
+      .price-line{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin: 7px 0; 
+        .price-group, .price-item{
+          width: 128px;
+          height: 38px;
+          box-sizing: border-box;
+          border: 1px solid #E1E1E1;
+          border-radius: 4px;
+          line-height: 38px;
+          text-align: center;
+          font-size: 14px;
+          margin-right: 14px;
+        }
+        .price-item{
+          cursor: pointer;
+          &.active{
+            border-color: #6e68fc !important;
+          }
+        }
+        .price-group{
+          background: #F7FAFB;
+        }
+      }
+    }
+    .btn-box{
+      width: 100%;
+      margin: 20px 0;
+      button{
+        width: 140px;
+        height: 40px;
+        margin-right: 24px;
+      }
+    }
+  }
+}

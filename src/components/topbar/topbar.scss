@@ -1,0 +1,244 @@
+.topbar-container {
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  background: white;
+
+
+  .logo {
+    cursor: pointer;
+    font-size: 1.625rem;
+    font-weight: bold;
+    width: 110px;
+    height: 30px;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    margin-left: 13px;
+
+    .navigation-item {
+      opacity: 0.5;
+      display: flex;
+      align-items: center;
+      margin-left: 26px;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      a {
+        color: #000;
+        text-decoration: none;
+        font: 0.94rem;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .console-button {
+    box-sizing: border-box;
+    height: 40px;
+    background: rgba(110, 104, 252, 1);
+    border-radius: 4px;
+    padding: 0 13px 0 32px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .add-icon {
+      width: 18px;
+      height: 18px;
+      background: rgba($color: #ffffff, $alpha: 0.1);
+      border-radius: 50%;
+      margin-left: 23px;
+
+      :nth-child(1) {
+        width: 12px;
+        height: 2px;
+        background: #fff;
+        border-radius: 1px;
+        transform: translate3d(3px, 8px, 0);
+      }
+
+      :nth-child(2) {
+        width: 2px;
+        height: 12px;
+        background: #fff;
+        border-radius: 1px;
+        transform: translate3d(8px, 1px, 0);
+      }
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-20deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+.notice {
+  display: block;
+  margin-left: 29px;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  position: relative;
+  &:hover {
+    div {
+      animation: rotate 0.2s 2 ease-in-out;
+    }
+  }
+  div {
+    width: 28px;
+    height: 28px;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat;
+  }
+  .num {
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    font-size: 0.625rem;
+    color: #ffffff;
+    background:rgba(255,0,73,1);
+    border-radius: 50%;
+    top: -6px;
+    right: -4px;
+    text-align: center;
+    line-height: 18px;
+  }
+}
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+
+    .avatar-box{
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 15px;
+      img{
+        width: 100%;
+      }
+    }
+
+    .user-name {
+      cursor: pointer;
+      font-size: 0.875rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+.control-topbar{
+  width: 100%;
+  height: 60px;
+  background: #272A38;
+  position: absolute;
+  top: 0;
+  .topbar-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    .top-left{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .logo{
+        font-size: 24px;
+        font-weight: 800;
+        cursor: pointer;
+      }
+      .tabs-box{
+        height: 60px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 160px;
+        margin: 0 50px;
+        .tabs-item{
+          line-height: 60px;
+          color: white;
+          width: 60px;
+          text-align: center;
+          cursor: pointer;
+          &.active{
+            color: #62CC95;
+          }
+        }
+        .tabs-line{
+          position: absolute;
+          bottom: 0;
+          width: 60px;
+          height: 1px;
+          background: #62CC95;
+        }
+      }
+    }
+    .top-right{
+      display: flex;
+      align-items: center;
+      .user-info{
+        display: flex;
+        align-items: center;
+        .balance{
+          color: #62CC95;
+          font-size: 16px;
+          margin-right: 20px;
+        }
+        .avatar{
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img{
+            width: 100%;
+          }
+        }
+      }
+
+      .sign-in{
+        outline: none;
+        border: 1px solid white;
+        border-radius: 4px;
+        height: 28px;
+        width: 80px;
+        background: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+}

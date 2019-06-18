@@ -1,0 +1,270 @@
+.signinPage {
+    width: 100%;
+    height: 100%;
+}
+
+.signinContainer {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 841px;
+    height: 500px;
+    padding: 20px 50px;
+    padding-left: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    background: #fff;
+}
+
+.carousel {
+    width: 360px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    background-image: url("../img/loginLeftImg.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 0 0 10px;
+
+    .welcome {
+        width: 247px;
+        height: 65px;
+        font-size: 46px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 1);
+        line-height: 65px;
+        position: absolute;
+        top: 73px;
+        left: 70px;
+    }
+
+    .views {
+        .ant-carousel {
+            .slick-dots {
+                li {
+                    width: 3px;
+                    height: 3px;
+                    background: #ccc;
+                }
+            }
+        }
+
+        .view {
+            width: 400px;
+            height: 450px;
+            position: relative;
+
+            img {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                bottom: 160px;
+            }
+
+            .text {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                bottom: 40px;
+                text-align: center;
+                font-size: 1rem;
+                color: rgba(0, 0, 0, 0.5);
+                line-height: 1.3;
+
+                span {
+                    font-weight: 600;
+                    font-size: 1.25rem;
+                    color: #000;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+
+    .indicators {
+        position: absolute;
+        display: inline-block;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        text-align: center;
+
+        .indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #eee;
+            border-radius: 50%;
+            margin: 0 2px;
+        }
+    }
+}
+
+.dividingLine {
+    width: 1px;
+    height: 340px;
+    background: #f2f2f2;
+    margin: 0 40px 0 0px;
+}
+
+.signin {
+    width: 312px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    // 标题
+    .title {
+        font-size: 1.8rem;
+    }
+
+    // 登录方式
+    .types {
+        width: 100%;
+        height: 55px;
+        line-height: 55px;
+        margin: 30px 0;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        background-color: #ededed;
+        box-sizing: border-box;
+        position: relative;
+
+        .type {
+            width: calc(100% / 2);
+            height: 51px;
+            line-height: 51px;
+            font-size: 14px;
+            border-radius: 8px;
+            background-color: transparent;
+            color: #000;
+            transition: all 0.5s ease;
+            box-sizing: border-box;
+            z-index: 5;
+            position: absolute;
+
+            &:nth-child(1) {
+                left: 0;
+            }
+
+            &:nth-child(2) {
+                right: 0;
+            }
+
+            &.typeActive {
+                z-index: 4;
+                background-color: #fff;
+            }
+
+            &.typeActiveLf {
+                left: 50%;
+                transform: translate3d(-100%, 0, 0);
+            }
+
+            &.typeActiveRt {
+                right: 0%;
+                transform: translate3d(0%, 0, 0);
+            }
+        }
+
+        .typeCheckbox {
+            width: 50%;
+            height: 51px;
+            opacity: 0;
+            border-radius: 8px;
+            position: absolute;
+            z-index: 6;
+            cursor: pointer;
+        }
+
+        .lt0 {
+            left: 0;
+        }
+
+        .rt0 {
+            right: 0;
+        }
+    }
+
+    .buttonSubmit {
+        width: 100%;
+        height: 56px;
+        border: none;
+        border-radius: 8px;
+        padding: 0;
+        color: #fff;
+
+        &:hover,
+        &:foucs {
+            border: none;
+            color: #fff;
+        }
+    }
+
+    .signSet {
+        margin: 20px 0;
+        display: flex;
+        justify-content: space-between;
+
+        .link {
+            cursor: pointer;
+            color: #6e68fc;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+.topHeader {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .topHeaderLogo{
+      width: 48px;
+      height: 48px;
+      float: left;
+      margin-top: 28px;
+      background-size: cover;
+      background-position: center;
+    }
+    .topHeaderName {
+        font-size: 32px;
+        font-weight: 500;
+        color: rgba(51, 51, 51, 1);
+        line-height: 45px;
+        float: left;
+        margin-top: 31px;
+        margin-left: 10px;
+    }
+
+    .topHeaderTip {
+        font-size: 16px;
+        font-weight: 400;
+        color: rgba(51, 51, 51, 1);
+        line-height: 22px;
+        float: right;
+        margin-top: 50px;
+        margin-right: 9px;
+    }
+
+    .topHeaderPhone {
+        font-size: 24px;
+        font-weight: 600;
+        color: rgba(51, 51, 51, 1);
+        line-height: 33px;
+        float: right;
+        margin-top: 44px;
+    }
+}

@@ -29,11 +29,19 @@ const env = getClientEnvironment(publicUrl);
 module.exports = {
   // You may want 'eval' instead if you prefer to see the compiled output in DevTools.
   // See the discussion in https://github.com/facebookincubator/create-react-app/issues/343.
-  devtool: 'cheap-module-source-map',
+  devtool: false,
   // These are the "entry points" to our application.
   // This means they will be the "root" imports that are included in JS bundle.
   // The first two entry points enable "hot" CSS and auto-refreshes for JS.
   entry: [
+    // 开启react代码的模块热替换（HMR）
+    'react-hot-loader/patch',
+    // 为webpack-dev-server的环境打包好运行代码
+    // 然后连接到指定服务器域名与端口, 这里的端口为自己项目的端口
+    'webpack-dev-server/client?http://localhost:80/',
+    // 为热替换（HMR）打包好运行代码
+    // only- 意味着只有成功更新运行代码才会执行热替换（HMR）
+    'webpack/hot/only-dev-server',
     // We ship a few polyfills by default:
     require.resolve('./polyfills'),
     // Include an alternative client for WebpackDevServer. A client's job is to
@@ -96,7 +104,7 @@ module.exports = {
       '.jsx',
     ],
     alias: {
-      
+
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
@@ -118,12 +126,12 @@ module.exports = {
       // We are waiting for https://github.com/facebookincubator/create-react-app/issues/2176.
       // { parser: { requireEnsure: false } },
 
-      {
-        test: /\.(js|jsx|mjs)$/,
-        loader: require.resolve('source-map-loader'),
-        enforce: 'pre',
-        include: paths.appSrc,
-      },
+      // {
+      //   test: /\.(js|jsx|mjs)$/,
+      //   loader: require.resolve('source-map-loader'),
+      //   enforce: 'pre',
+      //   include: paths.appSrc,
+      // },
       {
         // "oneOf" will traverse all following loaders until one will
         // match the requirements. When no loader matches it will fall
@@ -140,19 +148,19 @@ module.exports = {
               name: 'static/media/[name].[hash:8].[ext]',
             },
           },
-          {
-            test: /\.(js|jsx|mjs)$/,
-            include: paths.appSrc,
-            loader: require.resolve('babel-loader'),
-            options: {
-              plugins: [
-                // 引入样式为 css
-                // style为true 则默认引入less
-                ['import', { libraryName: 'antd', style: 'css' }],
-              ],
-              compact: true,
-            },
-          },
+          // {
+          //   test: /\.(js|jsx|mjs)$/,
+          //   include: paths.appSrc,
+          //   loader: require.resolve('babel-loader'),
+          //   options: {
+          //     plugins: [
+          //       // 引入样式为 css
+          //       // style为true 则默认引入less
+          //       ['import', { libraryName: 'antd', style: 'css' }],
+          //     ],
+          //     compact: true,
+          //   },
+          // },
 
           // Compile .tsx?
           {
@@ -178,38 +186,53 @@ module.exports = {
                 options: {
                   importLoaders: 1,
                   // modules: true,
-                  // localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                  // localIdentName: '[name]__[local]--[hash:base64:5]',
                 },
               },
+              // {
+              //   loader: require.resolve('postcss-loader'),
+              //   options: {
+              //     // Necessary for external CSS imports to work
+              //     // https://github.com/facebookincubator/create-react-app/issues/2677
+              //     ident: 'postcss',
+              //     plugins: () => [
+              //       require('postcss-flexbugs-fixes'),
+              //       autoprefixer({
+              //         browsers: [
+              //           '>1%',
+              //           'last 4 versions',
+              //           'Firefox ESR',
+              //           'not ie < 9', // React doesn't support IE8 anyway
+              //         ],
+              //         flexbox: 'no-2009',
+              //       }),
+              //     ],
+              //   },
+              // },
+            ],
+          },
+
+          {
+            test: /\.less$/,
+            use: [
+              require.resolve('style-loader'),
               {
-                loader: require.resolve('postcss-loader'),
+                loader: require.resolve('css-loader')
+              },
+              {
+                loader: require.resolve('less-loader'), // compiles Less to CSS
                 options: {
-                  // Necessary for external CSS imports to work
-                  // https://github.com/facebookincubator/create-react-app/issues/2677
-                  ident: 'postcss',
-                  plugins: () => [
-                    require('postcss-flexbugs-fixes'),
-                    autoprefixer({
-                      browsers: [
-                        '>1%',
-                        'last 4 versions',
-                        'Firefox ESR',
-                        'not ie < 9', // React doesn't support IE8 anyway
-                      ],
-                      flexbox: 'no-2009',
-                    }),
-                  ],
-                },
+                  modifyVars: {
+                    '@primary-color': '#6e68fc',
+                    '@link-color': '#6e68fc',
+                  },
+                  javascriptEnabled: true
+                }
               },
             ],
           },
-          // "postcss" loader applies autoprefixer to our CSS.
-          // "css" loader resolves paths in CSS and adds assets as dependencies.
-          // "style" loader turns CSS into JS modules that inject <style> tags.
-          // In production, we use a plugin to extract that CSS to a file, but
-          // in development "style" loader enables hot editing of CSS.
           {
-            test: /\.css$/,
+            test: /\.scss$/,
             use: [
               require.resolve('style-loader'),
               {
@@ -217,46 +240,13 @@ module.exports = {
                 options: {
                   importLoaders: 1,
                   modules: true,
-                  localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                  localIdentName: '[name]__[local]--[hash:base64:5]',
                 },
               },
               {
-                loader: require.resolve('postcss-loader'),
-                options: {
-                  // Necessary for external CSS imports to work
-                  // https://github.com/facebookincubator/create-react-app/issues/2677
-                  ident: 'postcss',
-                  plugins: () => [
-                    require('postcss-flexbugs-fixes'),
-                    autoprefixer({
-                      browsers: [
-                        '>1%',
-                        'last 4 versions',
-                        'Firefox ESR',
-                        'not ie < 9', // React doesn't support IE8 anyway
-                      ],
-                      flexbox: 'no-2009',
-                    }),
-                  ],
-                },
+                loader: require.resolve('sass-loader'), // compiles Sass to CSS
               },
             ],
-          },
-          {
-            test: /\.less$/,
-            use: [
-                require.resolve('style-loader'),
-                {
-                    loader: require.resolve('css-loader')
-                },
-                {
-                    loader: require.resolve('less-loader'), // compiles Less to CSS
-                },
-            ],
-          },
-          {
-            test:/\.scss$/,
-            loaders:['style-loader','css-loader?modules','sass-loader'],
           },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
@@ -291,6 +281,10 @@ module.exports = {
       inject: true,
       template: paths.appHtml,
     }),
+    new webpack.DllReferencePlugin({
+      context: __dirname,//上下文关系
+      manifest: require('../dll/manifest.json')//生成的索引表
+    }),
     // Add module names to factory functions so they appear in browser profiler.
     new webpack.NamedModulesPlugin(),
     // Makes some environment variables available to the JS code, for example:
@@ -315,7 +309,8 @@ module.exports = {
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     // Perform type checking and linting in a separate process to speed up compilation
     new ForkTsCheckerWebpackPlugin({
-      async: false,
+      async: true,
+      silent: false,
       watch: paths.appSrc,
       tsconfig: paths.appTsConfig,
       tslint: paths.appTsLint,

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="216px" height="252px" viewBox="0 0 216 252" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>矩形 copy 50</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="4.04803241%" y1="2.81025203e-14%" x2="92.6793862%" y2="94.4759604%" id="linearGradient-1">
+            <stop stop-color="#F55829" offset="0%"></stop>
+            <stop stop-color="#E32973" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="拍信云首页" transform="translate(-549.000000, -1968.000000)">
+            <rect id="矩形-copy-50" fill="url(#linearGradient-1)" x="549" y="1968" width="216" height="252" rx="8"></rect>
+            <g id="分组-4-copy" transform="translate(607.000000, 2026.000000)">
+                <polygon id="路径-copy" fill="#535461" points="80 24.7950361 48 17 48 78 80 69.5281897"></polygon>
+                <polygon id="路径-copy-2" fill="#000000" opacity="0.1" points="80 24.7950361 48 17 48 78 80 69.5281897"></polygon>
+                <polygon id="路径-copy-3" fill="#535461" points="16 24.7950361 48 17 48 78 16 69.6967092"></polygon>
+                <polygon id="路径-copy-4" fill="#000000" opacity="0.17" points="16 23.7607323 48 16 48 77 16 68.7332497"></polygon>
+                <polygon id="路径-copy-5" fill="#535461" points="48 17.1903242 64.5588147 3 96 11.3188851 79.4411853 25"></polygon>
+                <polygon id="路径-copy-6" fill="#535461" points="0 12.2026355 16.2770773 25 48 17.4526355 31.8894334 4"></polygon>
+                <polygon id="路径-copy-7" fill="#000000" opacity="0.05" points="0 11.487721 16.536945 25 48 17.1903242 31.6282016 3"></polygon>
+                <rect id="矩形-copy-4" fill="#F5F5F5" x="22" y="0" width="52" height="37"></rect>
+                <rect id="矩形-copy-14" fill="#E0E0E0" x="30" y="33" width="12" height="1" rx="0.5"></rect>
+                <rect id="矩形-copy-24" fill="#E0E0E0" x="45" y="33" width="14" height="1"></rect>
+                <rect id="矩形-copy-27" fill="#FF6347" x="50" y="36" width="4" height="1"></rect>
+                <polygon id="路径-copy-8" fill="#535461" points="16 25 16 69.7286963 47.5738419 78 48 33.6083872"></polygon>
+                <polygon id="路径-copy-9" fill="#535461" points="80 69.560826 48 78 48 33.6083872 80 25"></polygon>
+                <polygon id="路径-copy-10" fill="#000000" opacity="0.07" points="80 69.560826 48 78 48 33.6083872 80 25"></polygon>
+                <polygon id="路径-copy-11" fill="#000000" opacity="0.07" points="67 54.5008104 67 69 79 65.5005157 79 51"></polygon>
+                <polygon id="路径-copy-12" fill="#000000" opacity="0.1" points="16 47.4726464 33.7406934 52 48 40.2606375 48 33.0499629 16.3311209 25"></polygon>
+                <polygon id="路径-copy-13" fill="#000000" opacity="0.1" points="80 47.4726464 62.2593066 52 48 40.2606375 48 33.0499629 79.6688791 25"></polygon>
+                <polygon id="路径-copy-14" fill="#535461" points="16.2770773 25 0 38.8136064 31.7229227 47 48 33.6979584"></polygon>
+                <polygon id="路径-copy-15" fill="#535461" points="79.6137068 25 96 38.8136064 64.5522237 47 48 33.6979584"></polygon>
+                <polygon id="路径-copy-16" fill="#000000" opacity="0.07" points="79.6137068 25 96 38.8136064 64.5522237 47 48 33.6979584"></polygon>
+                <text id="专利" font-family="PingFangHK-Regular, PingFang HK" font-size="18" font-weight="normal" fill="#6F6F6F">
+                    <tspan x="30" y="24">专利</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

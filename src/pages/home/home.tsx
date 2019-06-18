@@ -1,11 +1,11 @@
-import { Button } from 'antd'
 import * as React from 'react';
-import { Link } from "react-router-dom";
-import Hello from 'src/components/hello/hello';
-import style from './home.scss';
+import Sider from './sider'
+import Main from './main'
+import style from './home.scss'
+import { RouteComponentProps, withRouter } from 'react-router'
 
-class Home extends React.Component<{}, { value: number }> {
-  constructor(props: any) {
+class Home extends React.Component<RouteComponentProps, { value: number }> {
+  constructor(props: RouteComponentProps) {
     super(props)
     this.state = {
       value: 0
@@ -15,26 +15,11 @@ class Home extends React.Component<{}, { value: number }> {
   public render() {
     return (
       <div className={style.home}>
-        <div>拍信云首页</div>
-        <div>本地的计数{this.state.value}</div>
-        <div onClick={() => this.add()}>
-          +
-        </div>
-        <Link to={`/about`}>
-          <Button type='primary'>
-            点此去about页面
-          </Button>
-        </Link>
-        <Hello />
+        <Sider />
+        <Main/>
       </div>
     )
   }
-  public componentWillMount() {
-    window.console.log(this.props)
-  }
-  private add() {
-    this.setState({value: this.state.value + 1})
-  }
 }
 
-export default Home;
+export default withRouter(Home);

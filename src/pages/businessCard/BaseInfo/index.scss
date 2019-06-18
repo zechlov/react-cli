@@ -1,0 +1,92 @@
+.business-card-info {
+  flex: 1;
+  height: 100vh;
+  box-sizing: border-box;
+
+  .content-wrapper {
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 20px;
+    height: calc(100vh - 150px);
+    background: #fff;
+    border-radius: 8px;
+    overflow-y: scroll;
+
+    .logoUpload {
+      height: 128px;
+      margin-top: 15px;
+      border-radius: 8px;
+      background: rgba(247, 250, 251, 1);
+      display: flex;
+      align-items: center;
+      padding: 0 26px;
+      margin-bottom: 16px;
+
+      .logoPreview {
+        width: 88px;
+        height: 88px;
+        line-height: 88px;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 50%;
+        overflow: hidden;
+        color: #888888;
+        font-weight: 600;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+          width: 100%;
+        }
+      }
+
+      .logoUploadTips {
+        margin-left: 26px;
+
+        span {
+          color: #6e68fc;
+          font-size: 0.875rem;
+          cursor: pointer;
+        }
+
+        p {
+          margin-top: 8px;
+          color: #B8B8B8;
+          font-size: 0.75rem;
+        }
+      }
+    }
+
+    .baseInfoFormWapper {
+      margin-top: 12px;
+      background: #F7FAFB;
+      border-radius: 8px;
+      padding: 24px 0 1px 0;
+      margin-bottom: 20px;
+
+      .baseInfoForm {
+        width: 370px;
+      }
+    }
+
+    .map {
+      height: 256px;
+      border-radius: 8px;
+      background: #F7FAFB;
+      margin-top: 20px;
+    }
+
+    .save {
+      width: 118px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #fff;
+      background: rgba(110, 104, 252, 1);
+      border-radius: 6px;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+  }
+}

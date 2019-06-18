@@ -1,0 +1,102 @@
+.footer-container{
+  background: #2F323A;
+  margin-top: 80px;
+  .footer-wrapper{
+    height: 220px;
+    background: #2F323A;
+    padding: 30px 0;
+    box-sizing: border-box;
+    .footer-box{
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      height: 100%;
+
+      .client-name, .client-phone {
+        height: 100%;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        .title{
+          font-size: 14px;
+          color: #666666;
+        }
+      }
+      .client-name {
+        .content{
+          font-size: 22px;
+          color: #E8E8E8;
+          line-height: 70px;
+        }
+      }
+      .client-phone {
+        .content {
+          font-size: 24px;
+          color: #62CC95;
+          line-height: 70px;
+        }
+      }
+
+
+      .list-line{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        .list-cloumn{
+          display: flex;
+          flex-direction: column;
+          .title{
+            font-size: 18px;
+            line-height: 40px;
+            color: rgba(255,255,255,0.5);
+          }
+          .link{
+            color: white;
+            font-size: 14px;
+            line-height: 30px;
+            &:hover{
+              color: #6e68fc;
+            }
+          }
+        }
+      }
+
+      .middle{
+        width: 1px;
+        background: #E8E8E8;
+        height: 100%;
+        margin-right: 100px;
+      }
+
+      .text-line{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15px;
+        .title{
+          font-size: 18px;
+          color: #333333;
+          line-height: 25px;
+        }
+        .text{
+          font-size: 30px;
+          color: #62CC95;
+          line-height: 60px;
+        }
+        .tip{
+          font-size: 14px;
+          color: #999999;
+        }
+      }
+    }
+  }
+  .under-line{
+    text-align: center;
+    height: 84px;
+    border-top: 1px solid #464646;
+    line-height: 84px;
+    color: rgba(255,255,255,0.5)
+  }
+}

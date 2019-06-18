@@ -1,0 +1,41 @@
+.payment-success{
+  width: 1200px;
+  padding: 0 60px;
+  height: 550px;
+  box-sizing: border-box;
+  background: white;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .header-bar{
+    font-size: 28px;
+    color: #333333;
+  }
+  .detail-box{
+    width: 726px;
+    height: 168px;
+    border: 2px dashed #DFDFDF;
+    background: #F7FAFB;
+    box-sizing: border-box;
+    padding: 0 40px;
+    .title{
+      font-size: 20px;
+      line-height: 80px;
+      color: #333333;
+    }
+    .tips-line{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      .tip{
+        margin-right: 60px;
+      }
+    }
+  }
+  .btn{
+    width: 140px;
+    height: 40px;
+    margin: 55px 0;
+  }
+}

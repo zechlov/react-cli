@@ -1,0 +1,18 @@
+.subtitle-component {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    display: inline-block;
+    width: 3px;
+    height: 15px;
+    background: rgba(110, 104, 252, 1);
+    border-radius: 2px;
+  }
+
+  .text {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+}

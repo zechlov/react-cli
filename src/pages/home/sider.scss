@@ -1,0 +1,115 @@
+.sider {
+  box-sizing: border-box;
+  width: 257px;
+
+  .manage-platform {
+    width: 100%;
+    height: 75px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 8px;
+    color: #000;
+    line-height: 75px;
+    text-align: center;
+  }
+
+  .product-list {
+    width: 100%;
+    margin-top: 15px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+
+    .product-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 55px;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &:hover {
+        background: rgba($color: #000000, $alpha: 0.05);
+        transition: background 0.2s;
+      }
+
+      img {
+        width: 24px;
+      }
+
+      span {
+        margin-left: 12px;
+        color: #000;
+      }
+    }
+
+    .dividing {
+      width: 100%;
+      height: 1px;
+      background: rgba(151, 151, 151, 0.1);
+    }
+  }
+
+  .account-up {
+    box-sizing: border-box;
+    margin-top: 15px;
+    width: 100%;
+    height: 171px;
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover {
+      background: rgba($color: #000000, $alpha: 0.05);
+      transition: background 0.2s;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0;
+      margin: 0;
+    }
+
+    p {
+      text-align: center;
+      font-size: 0.875rem;
+      color: #000;
+      margin-top: 20px;
+    }
+  }
+
+  .recommend {
+    box-sizing: border-box;
+    width: 100%;
+    height: 400px;
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 99px;
+      height: 234px;
+    }
+
+    p {
+      text-align: center;
+      margin: 14px 0;
+    }
+
+    a {
+      color: #3976FD;
+      outline: none;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
